@@ -11,21 +11,28 @@
 
 ?>
 
-<footer id="colophon" class="site-footer">
-    <div class="site-info">
-        <a href="<?php echo esc_url(__('https://wordpress.org/', 'cyno')); ?>">
-            <?php
-            /* translators: %s: CMS name, i.e. WordPress. */
-            printf(esc_html__('Proudly powered by %s', 'cyno'), 'WordPress');
-            ?>
+<footer id="colophon" class="site-footer bg-dark text-light py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Cột trái -->
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <a href="<?php echo esc_url(__('https://wordpress.org/', 'cyno')); ?>" class="text-decoration-none text-light">
+          <?php
+          printf(esc_html__('Proudly powered by %s', 'cyno'), 'WordPress');
+          ?>
         </a>
-        <span class="sep"> | </span>
+      </div>
+
+      <!-- Cột phải -->
+      <div class="col-md-6 text-center text-md-end">
         <?php
-        /* translators: 1: Theme name, 2: Theme author. */
-        printf(esc_html__('Theme: %1$s by %2$s.', 'cyno'), 'cyno', '<a href="http://underscores.me/">Underscores.me</a>');
+        printf(esc_html__('Theme by CYNO.', 'cyno'));
         ?>
-    </div><!-- .site-info -->
-</footer><!-- #colophon -->
+      </div>
+    </div>
+  </div>
+</footer>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
