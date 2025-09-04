@@ -33,6 +33,12 @@ class Child_Theme_Init
         // Load admin
         include_once THEME_INCLUDES_DIR . '/admin.php';
 
+        // Load modules
+        require_once THEME_INCLUDES_DIR . '/modules/custom-header.php';
+        require_once THEME_INCLUDES_DIR . '/modules/customizer.php';
+        require_once THEME_INCLUDES_DIR . '/modules/jetpack.php';
+        require_once THEME_INCLUDES_DIR . '/modules/template-functions.php';
+        require_once THEME_INCLUDES_DIR . '/modules/template-tags.php';
     }
 
     public function load_child_theme_language()
