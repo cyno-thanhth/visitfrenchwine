@@ -60,6 +60,10 @@ class Child_Theme_Init
             array(),
             null
         );
+
+        // Enqueue styles
+        wp_enqueue_style('frontend', THEME_ASSETS_URI . '/css/frontend.css', array(), THEME_VERSION, 'all');
+
         // Bootstrap JS (CDN)
         wp_enqueue_script(
             'bootstrap-js',
@@ -68,8 +72,6 @@ class Child_Theme_Init
             null,
             true
         );
-        // Enqueue styles
-        wp_enqueue_style('frontend', THEME_ASSETS_URI . '/css/frontend.css', array(), THEME_VERSION, 'all');
 
         // Enqueue scripts
         wp_enqueue_script('frontend', THEME_ASSETS_URI . '/js/frontend' . '.js', array(), THEME_VERSION, true);
