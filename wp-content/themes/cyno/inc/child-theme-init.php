@@ -34,11 +34,7 @@ class Child_Theme_Init
         include_once THEME_INCLUDES_DIR . '/admin.php';
 
         // Load modules
-        require_once THEME_INCLUDES_DIR . '/modules/custom-header.php';
-        require_once THEME_INCLUDES_DIR . '/modules/customizer.php';
-        require_once THEME_INCLUDES_DIR . '/modules/jetpack.php';
-        require_once THEME_INCLUDES_DIR . '/modules/template-functions.php';
-        require_once THEME_INCLUDES_DIR . '/modules/template-tags.php';
+
     }
 
     public function load_child_theme_language()
@@ -64,18 +60,18 @@ class Child_Theme_Init
             'bootstrap-css',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
             array(),
-            null
+            '5.3.3'
         );
 
         // Enqueue styles
-        wp_enqueue_style('frontend', THEME_ASSETS_URI . '/css/frontend.css', array(), THEME_VERSION, 'all');
+        wp_enqueue_style('frontend', THEME_ASSETS_URI . '/css/frontend.css', array('bootstrap-css'), THEME_VERSION, 'all');
 
         // Bootstrap JS (CDN)
         wp_enqueue_script(
             'bootstrap-js',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
-            array('jquery'),
-            null,
+            array(),
+            '5.3.3',
             true
         );
 
